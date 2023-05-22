@@ -1,4 +1,4 @@
-import HttpStatus from "http-status-enum";
+import HttpStatus from 'http-status-enum';
 
 export enum HttpMethod {
   GET = 'GET',
