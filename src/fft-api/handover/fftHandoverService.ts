@@ -24,9 +24,9 @@ export class FftHandoverService {
     } catch (err) {
       const httpError = err as ResponseError;
       this.logger.error(
-        `Could not get handover jobs with for pickjob id '${pickJobId}'. Failed with status ${
-          httpError.status
-        }, error: ${httpError.response ? JSON.stringify(httpError.response.body) : ''}`
+        `Could not get handover jobs for pickjob id '${pickJobId}'. Failed with status ${httpError.status}, error: ${
+          httpError.response ? JSON.stringify(httpError.response.body) : ''
+        }`
       );
 
       throw err;
