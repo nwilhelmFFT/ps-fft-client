@@ -5,5 +5,5 @@ export declare class FftLoadUnitService {
     private readonly path;
     private readonly logger;
     constructor(apiClient: FftApiClient);
-    get(pickJobRef: string): Promise<LoadUnit[]>;
+    findByPickJobRef(pickJobRef: string): Promise<LoadUnit[]>;
 }
