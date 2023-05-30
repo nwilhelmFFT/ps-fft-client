@@ -5,5 +5,7 @@ export * from './loadunit';
 export * from './order';
 export * from './pickjob';
 export * from './handover';
+export * from './parcel';
 export * from './routing-plan';
+export * from './shipment';
 export * from './types';
