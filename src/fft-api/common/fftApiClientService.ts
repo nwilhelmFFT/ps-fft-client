@@ -3,12 +3,27 @@ import { HttpClient, HttpMethod, MAX_RETRIES, QueryParams } from '../../common';
 
 export class FftApiClient {
   private readonly baseUrl: string;
+  private readonly authService: AuthService;
+  private readonly httpClient: HttpClient;
   constructor(
-    private readonly authService: AuthService,
-    private readonly httpClient: HttpClient,
-    private readonly projectId: string
+
+    private readonly projectId: string,
+    private readonly username: string,
+    private readonly password: string,
+    private readonly apiKey: string,
   ) {
     this.baseUrl = `https://${this.projectId}.api.fulfillmenttools.com/api`;
+    this.httpClient = new HttpClient();
+    this.authService = new AuthService(
+      {
+      apiKey,
+      apiPassword: password,
+      apiUser: username,
+      authUrl: 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword',
+      refreshUrl: 'https://securetoken.googleapis.com/v1/token'
+      },
+      this.httpClient
+    );
   }
 
   public async post<T>(path: string, data?: Record<string, unknown>, params?: QueryParams): Promise<T> {
