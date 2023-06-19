@@ -5,22 +5,16 @@ export class FftApiClient {
   private readonly baseUrl: string;
   private readonly authService: AuthService;
   private readonly httpClient: HttpClient;
-  constructor(
-
-    private readonly projectId: string,
-    private readonly username: string,
-    private readonly password: string,
-    private readonly apiKey: string,
-  ) {
-    this.baseUrl = `https://${this.projectId}.api.fulfillmenttools.com/api`;
+  constructor(projectId: string, username: string, password: string, apiKey: string) {
+    this.baseUrl = `https://${projectId}.api.fulfillmenttools.com/api`;
     this.httpClient = new HttpClient();
     this.authService = new AuthService(
       {
-      apiKey,
-      apiPassword: password,
-      apiUser: username,
-      authUrl: 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword',
-      refreshUrl: 'https://securetoken.googleapis.com/v1/token'
+        apiKey,
+        apiPassword: password,
+        apiUser: username,
+        authUrl: 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword',
+        refreshUrl: 'https://securetoken.googleapis.com/v1/token',
       },
       this.httpClient
     );
