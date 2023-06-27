@@ -1,9 +1,5 @@
 import { QueryParams } from '../../common';
 export declare class FftApiClient {
-    private readonly projectId;
-    private readonly username;
-    private readonly password;
-    private readonly apiKey;
     private readonly baseUrl;
     private readonly authService;
     private readonly httpClient;
