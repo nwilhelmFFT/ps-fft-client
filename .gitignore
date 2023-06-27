@@ -33,6 +33,11 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+*.tsbuildinfo
+.eslintcache
+
+.env*
+!.env.local
 
 # System Files
 .DS_Store
