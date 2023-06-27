@@ -1,6 +1,6 @@
-#  Contributing to Fulfillmenttools Commercetools Connect App
+#  Contributing to the Fulfillmenttools TypeScript SDK
 
-Thank you for your interest in contributing to Fulfillmenttools Commercetools Connect App!
+Thank you for your interest in contributing to the Fulfillmenttools TypeScript SDK!
 
 Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
 
@@ -8,7 +8,7 @@ Following these guidelines helps to communicate that you respect the time of the
 
 ## Reporting New Issues
 
-We use [GitHub issues](https://github.com/fulfillmenttools/ps-commercetools-connect-app/issues) for our public bugs. If you would like to report a problem, take a look around and see if someone already opened an issue about it. If you are certain this is a new unreported bug, you can submit a bug report.
+We use [GitHub issues](https://github.com/nwilhelmFFT/ps-fft-client/issues) for our public bugs. If you would like to report a problem, take a look around and see if someone already opened an issue about it. If you are certain this is a new unreported bug, you can submit a bug report.
 
 _TODO_
 
@@ -26,7 +26,7 @@ _TODO_
 
 ## Setting Up a Local Copy
 
-1. Clone the repo with `git clone git@github.com:fulfillmenttools/ps-commercetools-connect-app.git`
+1. Clone the repo with `git clone git@github.com:nwilhelmFFT/ps-fft-client.git`
 1. _TODO_
 
 ### Coding Conventions
@@ -39,5 +39,5 @@ Feel free to reach out to us at [opensource@fulfillmenttools.com](mailto:opensou
 
 ## License
 
-By contributing to the Fulfillmenttools Commercetools Connect App, you agree that your contributions will be licensed under its [MIT license](https://github.com/fulfillmenttools/ps-commercetools-connect-app/blob/master/LICENSE).
+By contributing to the Fulfillmenttools Commercetools Connect App, you agree that your contributions will be licensed under its [MIT license](https://github.com/nwilhelmFFT/ps-fft-client/blob/master/LICENSE).
 

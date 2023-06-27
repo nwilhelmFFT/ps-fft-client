@@ -47,14 +47,13 @@ $ npm run test
 $ npm run lint
 ```
 
-
 ## 📖 Documentation
 
 The official Fulfillmenttools API documentation can be found [here](https://docs.fulfillmenttools.com/api-docs/) and we also publish our [OpenAPI specification](https://fulfillmenttools.github.io/api-reference-ui/).
 
 ## 📜 License
 
-All code in this repository is licensed under the [MIT license](https://github.com/fulfillmenttools/ps-commercetools-connect-app/blob/master/LICENSE).
+All code in this repository is licensed under the [MIT license](https://github.com/nwilhelmFFT/ps-fft-client/blob/master/LICENSE).
 
 ## 🙌 Contributing
 
@@ -62,4 +61,4 @@ We'd love to have your helping hand on this ecosystem! Please see [CONTRIBUTING.
 
 ## :blue_heart: Thanks
 
-Thanks for all your contributions and efforts towards improving the Fulfillmenttools Commercetools Connect App. We thank you for being part of our :sparkles: community :sparkles:!
+Thanks for all your contributions and efforts towards improving the Fulfillmenttools TypeScript SDK. We thank you for being part of our :sparkles: community :sparkles:!
