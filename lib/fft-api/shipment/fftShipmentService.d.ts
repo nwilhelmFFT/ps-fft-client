@@ -1,4 +1,4 @@
-import { Shipment } from '../types';
+import { Shipment, ShipmentForCreation } from '../types';
 import { FftApiClient } from '../common';
 export declare class FftShipmentService {
     private readonly apiClient;
@@ -6,4 +6,5 @@ export declare class FftShipmentService {
     private readonly logger;
     constructor(apiClient: FftApiClient);
     findById(shipmentId: string): Promise<Shipment>;
+    create(shipment: ShipmentForCreation): Promise<Shipment>;
 }
