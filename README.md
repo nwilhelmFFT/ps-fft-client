@@ -5,6 +5,7 @@
   <b>Fulfillmenttools TypeScript SDK</b>
 </p>
 
+[![npm version](https://img.shields.io/npm/v/@fulfillmenttools/fulfillmenttools-sdk-typescript.svg?style=flat)](https://www.npmjs.com/package/@fulfillmenttools/fulfillmenttools-sdk-typescript) 
 ![CI](https://github.com/nwilhelmFFT/ps-fft-client/actions/workflows/ci.yml/badge.svg)
 [![License](https://img.shields.io/github/license/nwilhelmFFT/ps-fft-client)](./LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](./CODE_OF_CONDUCT.md)
