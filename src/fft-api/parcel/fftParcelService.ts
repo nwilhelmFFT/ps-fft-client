@@ -23,15 +23,15 @@ export class FftParcelService {
       throw err;
     }
   }
-  public async getShippingLabel(parcelId: string): Promise<Buffer | Blob> {
+  public async getShippingLabel(parcelId: string): Promise<Buffer> {
     try {
-      return await this.apiClient.get<Buffer| Blob>(`${this.path}/${parcelId}/send.pdf`);
+      return await this.apiClient.get<Buffer>(`${this.path}/${parcelId}/send.pdf`);
     } catch (err) {
       const httpError = err as ResponseError;
       this.logger.error(
-        `Could not get shipping label for parcel with id '${parcelId}'. Failed with status ${httpError.status}, error: ${
-          httpError.response ? JSON.stringify(httpError.response.body) : ''
-        }`
+        `Could not get shipping label for parcel with id '${parcelId}'. Failed with status ${
+          httpError.status
+        }, error: ${httpError.response ? JSON.stringify(httpError.response.body) : ''}`
       );
 
       throw err;

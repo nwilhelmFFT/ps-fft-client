@@ -1,5 +1,5 @@
 import { ResponseError } from 'superagent';
-import {PackJob, Shipment, ShipmentForCreation} from '../types';
+import { Shipment, ShipmentForCreation } from '../types';
 import { FftApiClient } from '../common';
 import { Logger } from 'tslog';
 import { CustomLogger } from '../../common';
@@ -23,7 +23,7 @@ export class FftShipmentService {
       throw err;
     }
   }
-  public async create(shipment: ShipmentForCreation): Promise<Shipment>{
+  public async create(shipment: ShipmentForCreation): Promise<Shipment> {
     try {
       return await this.apiClient.post<Shipment>(`${this.path}`, shipment as unknown as Record<string, unknown>);
     } catch (err) {
