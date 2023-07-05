@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { Parcel } from '../types';
 import { FftApiClient } from '../common';
 export declare class FftParcelService {
@@ -6,5 +7,6 @@ export declare class FftParcelService {
     private readonly logger;
     constructor(apiClient: FftApiClient);
     findById(parcelId: string): Promise<Parcel>;
+    getShippingLabel(parcelId: string): Promise<Buffer | Blob>;
     findMultiple(ids: string[]): Promise<Parcel[]>;
 }
