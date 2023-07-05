@@ -7,6 +7,6 @@ export declare class FftParcelService {
     private readonly logger;
     constructor(apiClient: FftApiClient);
     findById(parcelId: string): Promise<Parcel>;
-    getShippingLabel(parcelId: string): Promise<Buffer | Blob>;
+    getShippingLabel(parcelId: string): Promise<Buffer>;
     findMultiple(ids: string[]): Promise<Parcel[]>;
 }

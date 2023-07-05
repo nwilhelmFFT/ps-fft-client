@@ -1,4 +1,4 @@
-import { PackJob, PackJobForCreation } from '../types';
+import { AbstractModificationAction, PackJob, PackJobForCreation } from '../types';
 import { FftApiClient } from '../common';
 import { ResponseError } from 'superagent';
 import { CustomLogger } from '../../common';
@@ -9,7 +9,7 @@ export class FftPackJobService {
   private readonly logger: Logger<FftPackJobService> = new CustomLogger<FftPackJobService>();
   constructor(private readonly apiClient: FftApiClient) {}
 
-  public async create(packJob: PackJobForCreation): Promise<PackJob>{
+  public async create(packJob: PackJobForCreation): Promise<PackJob> {
     try {
       return await this.apiClient.post<PackJob>(`${this.path}`, packJob);
     } catch (err) {
@@ -19,6 +19,21 @@ export class FftPackJobService {
           httpError.response ? JSON.stringify(httpError.response.body) : ''
         }`
       );
+      throw err;
+    }
+  }
+
+  public async update(packJob: PackJob, actions: AbstractModificationAction[]): Promise<PackJob> {
+    try {
+      return await this.apiClient.patch<PackJob>(`${this.path}/${packJob.id}`, { version: packJob.version, actions });
+    } catch (err) {
+      const httpError = err as ResponseError;
+      this.logger.error(
+        `Could not update pack job with id '${packJob.id}'. Failed with status ${httpError.status}, error: ${
+          httpError.response ? JSON.stringify(httpError.response.body) : ''
+        }`
+      );
+
       throw err;
     }
   }
